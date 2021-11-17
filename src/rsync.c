@@ -125,7 +125,7 @@ rsync_signature_new()
     rs->buffers.avail_out = rs->allocated_output;
     rs->buffers.avail_in = 0;
     rs->buffers.eof_in = 0;
-    rs->job = rs_sig_begin(command_line.rsync_block_size, RS_DEFAULT_STRONG_LEN);
+    rs->job = rs_sig_begin(command_line.rsync_block_size, RS_DEFAULT_MIN_STRONG_LEN, 0);
     assert(rs->job != 0);
 
     return rs;

@@ -9,7 +9,7 @@ struct IndexElem {
     int signaturelen;
     char seen;
     char is_dir;
-} *ptr;
+};
 
 void index_load_from_fd(int fd);
 struct IndexElem * index_find_element(const char *name);
